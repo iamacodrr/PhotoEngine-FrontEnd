@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: photoenginefrontend 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: photoenginefrontend
+  template:
+    metadata:
+      labels:
+        app: photoenginefrontend 
+    spec:
+      containers:
+        - name: photoenginefrontend 
+          image: registryzero1.azurecr.io/photoenginefrontend
+          ports:
+          - containerPort: 80
