@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WeatherForecastComponent } from './Weather/weather-forecast/weather-forecast.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherForecastComponent
   ],
   imports: [
     BrowserModule,
