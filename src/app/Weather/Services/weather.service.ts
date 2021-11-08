@@ -8,7 +8,7 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   GetWeatherReport() {
-    let httpuri = 'http://10.0.109.228/weatherforecast';
+    let httpuri = 'http://20.79.213.155/weatherforecast';
     return this.http.get(httpuri).pipe(
       map((res) => {
         return res;
