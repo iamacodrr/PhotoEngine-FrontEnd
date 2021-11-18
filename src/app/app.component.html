@@ -290,14 +290,18 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner" fxLayout="row">
-  <img
-    width="50" height="35"
+<div fxLayout="row" style="background-color: aqua;">
+  <div fxFlex>
+    <img
+    width="75" height="40"
     alt="Angular Logo"
     src="https://www.topgear.com/sites/default/files/news-listicle/image/2017/08/p90076741_highres_bmw-328-hommage-05-2.jpg?w=848&h=477"
-  />
-  <span>Welcome To PhotoEngine</span>
+    />
+    <span>Welcome To PhotoEngine</span>
+  </div>
 </div>
 <div fxLayout="row">
-  <router-outlet></router-outlet>
+  <div fxFlex>
+    <router-outlet></router-outlet>
+  </div>
 </div>
