@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, ROUTES, Routes } from '@angular/router';
-import { WeatherForecastComponent } from "./Weather/weather-forecast/weather-forecast.component";
+import { PhotoDashComponent } from "./PhotoViewer/photo-dash/photo-dash.component";
 
-const routes: Routes = [{path: 'weatherforecast', component: WeatherForecastComponent}];
+const routes: Routes = [{path: 'photodash', component: PhotoDashComponent},
+                        { path: '',   redirectTo: '/photodash', pathMatch: 'full' }, ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
