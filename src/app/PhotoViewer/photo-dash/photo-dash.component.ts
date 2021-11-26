@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotoServerService } from "../Services/photo-server.service";
 
 @Component({
   selector: 'app-photo-dash',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoDashComponent implements OnInit {
 
-  constructor() { }
+  fileToUpload: File | null = null;
+
+  constructor(private photoSvc: PhotoServerService) { }
 
   ngOnInit(): void {
   }
+
+  handleFileInput(files: FileList){
+    this.fileToUpload = files.item(0);
+    this.photoSvc.PostFile(this.fileToUpload).subscribe(res=>{console.log(res)});
+  }
+
 
 }
